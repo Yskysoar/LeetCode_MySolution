@@ -39,12 +39,12 @@ public class Solution213 {
         dp[0] = 0;
         dp[1] = 0;
         dp[2] = nums[1];//不偷第一个房子
-        for (int i = 3; i <= nums.length; i++) {//
+        for (int i = 3; i <= nums.length; i++) {//房间号[2,n]
             dp[i] = Math.max(dp[i - 1], nums[i - 1] + dp[i - 2]);
         }
         dp[1] = nums[0];
         dp[2] = nums[0];//偷第一个房子
-        for (int i = 3; i < nums.length; i++) {//
+        for (int i = 3; i < nums.length; i++) {//房间号[1,n-1]
             dp[i] = Math.max(dp[i - 1], nums[i - 1] + dp[i - 2]);
         }
         return Math.max(dp[nums.length], dp[nums.length - 1]);
