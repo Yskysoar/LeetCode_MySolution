@@ -7,6 +7,7 @@ public class Solution136 {
         int res = solution136.singleNumber3(arr);
         System.out.println(res);
     }
+
     public int singleNumber1(int[] nums) {
         int single = 0;
         for (int num : nums) {
