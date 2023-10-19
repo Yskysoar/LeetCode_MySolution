@@ -31,8 +31,10 @@ public class Solution1726 {
      */
     public static void main(String[] args) {
         Solution1726 solution1726 = new Solution1726();
-        int ans = solution1726.tupleSameProduct2(new int[]{1, 2, 4, 5, 10});
-        System.out.println(ans);
+        int ans1 = solution1726.tupleSameProduct1(new int[]{1, 2, 4, 5, 10});
+        int ans2 = solution1726.tupleSameProduct2(new int[]{1, 2, 4, 5, 10});
+        System.out.println(ans1);
+        System.out.println(ans2);
     }
 
     /**
