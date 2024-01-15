@@ -4,11 +4,11 @@ import java.util.ArrayList;
  * @author Yskysoar
  * @createTime 2023-07-31 21:59
  * @description 143.重排链表
- * 给定一个单链表 L 的头节点 head ，单链表 L 表示为：
+ * 给定一个单链表 L 的头结点 head ，单链表 L 表示为：
  * L0 → L1 → … → Ln - 1 → Ln
  * 请将其重新排列后变为：
  * L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
- * 不能只是单纯改变节点内部的值，而是需要实际的进行节点交换。
+ * 不能只是单纯改变结点内部的值，而是需要实际的进行结点交换。
  * 示例 1：
  * 输入：head = [1,2,3,4]
  * 输出：[1,4,2,3]
@@ -35,7 +35,7 @@ public class Solution143 {
     /**
      * 线性表：先将单向链表保存到表中，然后根据要求插入即可
      * (若n+1为奇数，有n/2组，有中轴；若n+1为偶数，有(n+1)/2组，无中轴；只要到了索引为(n)/2就要开始反向排序)
-     * @param head 头节点
+     * @param head 头结点
      */
     public void reorderList(ListNode head) {
         ListNode node = head;

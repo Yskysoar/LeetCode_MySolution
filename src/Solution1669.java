@@ -4,7 +4,7 @@ public class Solution1669 {
     }
 
     /**
-     * 将[a,b]节点删除然后将list2接上删除位置
+     * 将[a,b]结点删除然后将list2接上删除位置
      * @param list1 初始链表
      * @param a 左边界
      * @param b 右边界

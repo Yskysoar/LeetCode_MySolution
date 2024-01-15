@@ -27,10 +27,10 @@ public class Solution823 {
 
     public int numFactoredBinaryTrees(int[] arr) {
         long MOD = (long) 1e9 + 7;//取模
-        Arrays.sort(arr);//将输入数据排序，根节点按小到大
-        HashMap<Integer, Long> hashMap = new HashMap<>();//存放每个数据作为根节点的子树数量
-        for (int i = 0; i < arr.length; i++) {//每个数据作为根节点开始遍历
-            hashMap.put(arr[i], 1L);//根节点加入map,本身也为一个解
+        Arrays.sort(arr);//将输入数据排序，根结点按小到大
+        HashMap<Integer, Long> hashMap = new HashMap<>();//存放每个数据作为根结点的子树数量
+        for (int i = 0; i < arr.length; i++) {//每个数据作为根结点开始遍历
+            hashMap.put(arr[i], 1L);//根结点加入map,本身也为一个解
             for (int j = 0; j < i; j++) {//找出每对因子
                 if (arr[i] % arr[j] == 0 && hashMap.containsKey(arr[i] / arr[j])) {//arr[j]是它的因数且存在另外一个对应的因数
                     hashMap.put(arr[i], (hashMap.get(arr[i]) + hashMap.get(arr[j]) * hashMap.get(arr[i] / arr[j])) % MOD);

@@ -5,11 +5,11 @@ import java.util.*;
 /**
  * @author Yskysoar
  * @createTime 2023-04-10 9:26
- * @description 1019. 链表中的下一个更大节点
+ * @description 1019. 链表中的下一个更大结点
  *
  * 给定一个长度为 n 的链表 head
- * 对于列表中的每个节点，查找下一个 更大节点 的值。也就是说，对于每个节点，找到它旁边的第一个节点的值，这个节点的值 严格大于 它的值。
- * 返回一个整数数组 answer ，其中 answer[i] 是第 i 个节点( 从1开始 )的下一个更大的节点的值。如果第 i 个节点没有下一个更大的节点，设置 answer[i] = 0 。
+ * 对于列表中的每个结点，查找下一个 更大结点 的值。也就是说，对于每个结点，找到它旁边的第一个结点的值，这个结点的值 严格大于 它的值。
+ * 返回一个整数数组 answer ，其中 answer[i] 是第 i 个结点( 从1开始 )的下一个更大的结点的值。如果第 i 个结点没有下一个更大的结点，设置 answer[i] = 0 。
  * 示例 1：
  * 输入：head = [2,1,5]
  * 输出：[5,5,0]
@@ -32,7 +32,7 @@ public class Solution1019 {
     /**
      * 暴力遍历，寻找下一个严格大于的指针
      * @param head 头指针
-     * @return 严格大节点值的数组
+     * @return 严格大结点值的数组
      */
     public int[] nextLargerNodes1(ListNode head) {
         List<Integer> list = new ArrayList<>();
@@ -56,7 +56,7 @@ public class Solution1019 {
     /**
      * 单调栈
      * @param head 头指针
-     * @return 严格大节点值的数组
+     * @return 严格大结点值的数组
      */
     public int[] nextLargerNodes2(ListNode head) {
         List<Integer> list = new ArrayList<>();
