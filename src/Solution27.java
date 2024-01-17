@@ -1,14 +1,15 @@
 //力扣题库第27题
 public class Solution27 {
     public static void main(String[] args) {
-        int[] nums = new int[] {3,3,2,3};
+        int[] nums = new int[]{3, 3, 2, 3};
         Solution27 solution = new Solution27();
-        int res = solution.removeElement(nums,3);
+        int res = solution.removeElement(nums, 3);
         System.out.println(res);
 
     }
+
     public int removeElement(int[] nums, int val) {
-        if (nums.length == 0 || nums == null) {
+        if (nums.length == 0) {
             return 0;
         }
         boolean isFlag = false;
@@ -27,7 +28,7 @@ public class Solution27 {
             }
             for (int i = 0; i < nums.length; i++) {
                 if (nums[i] == val) {
-                    Swap(nums,i);
+                    Swap(nums, i);
                     i--;
                 }
                 if (i + 1 == nums.length - num) {
@@ -39,6 +40,7 @@ public class Solution27 {
         }
         return 0;
     }
+
     public void Swap(int[] n, int index) {
         for (int i = index; i < n.length - 1; i++) {
             int temp = n[i];

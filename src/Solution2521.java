@@ -3,9 +3,10 @@ import java.util.HashSet;
 public class Solution2521 {
     public static void main(String[] args) {
         Solution2521 solution2521 = new Solution2521();
-        int res = solution2521.distinctPrimeFactors2(new int[] {2,4,3,7,10,6});
+        int res = solution2521.distinctPrimeFactors2(new int[]{2, 4, 3, 7, 10, 6});
         System.out.println(res);
     }
+
     public int distinctPrimeFactors1(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int i : nums) {
@@ -25,6 +26,7 @@ public class Solution2521 {
         }
         return set.size();
     }
+
     public int distinctPrimeFactors2(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int i : nums) {//除1外，一个数不是质数就是合数
@@ -42,6 +44,7 @@ public class Solution2521 {
         }
         return set.size();
     }
+
     public boolean isPrime(int num) {
         for (int i = 2; i * i <= num; i++) {
             if (num % i == 0) {

@@ -25,7 +25,6 @@
  * “G”:移动一步。位置:(0,0)方向:南。
  * 重复指令，机器人进入循环:(0,0)——>(0,1)——>(0,2)——>(0,1)——>(0,0)。
  * 在此基础上，我们返回true
- *
  * 示例 2：
  * 输入：instructions = "GG"
  * 输出：false
@@ -34,7 +33,6 @@
  * “G”:移动一步。位置:(0,2).方向:北。
  * 重复这些指示，继续朝北前进，不会进入循环。
  * 在此基础上，返回false
- *
  * 示例 3：
  * 输入：instructions = "GL"
  * 输出：true
@@ -49,7 +47,6 @@
  * “L”:逆时针旋转90度。位置:(0,0)方向:北。
  * 重复指令，机器人进入循环:(0,0)——>(0,1)——>(- 1,1)——>(- 1,0)——>(0,0)。
  * 在此基础上，我们返回true。
- *
  */
 public class Solution1041 {
     public static void main(String[] args) {
@@ -72,7 +69,7 @@ public class Solution1041 {
         int direction = 1;//1：北  2：东  3：南  4：西
         for (int i = 0; i < instructions.length(); i++) {
             switch (instructions.charAt(i)) {
-                case 'L' -> direction = (direction -1 + 4) % 4;//逆时针成环
+                case 'L' -> direction = (direction - 1 + 4) % 4;//逆时针成环
                 case 'R' -> direction = (direction + 1) % 4;//顺时针成环
                 case 'G' -> {
                     if (direction == 1) {

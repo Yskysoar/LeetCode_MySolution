@@ -2,14 +2,15 @@
 public class Solution168 {
     public static void main(String[] args) {
         Solution168 solution168 = new Solution168();
-        String res =solution168.convertToTitle(27);
+        String res = solution168.convertToTitle(27);
         System.out.println(res);
     }
+
     public String convertToTitle(int columnNumber) {
         StringBuilder res = new StringBuilder();
         for (int i = 0; columnNumber > 0; i++) {
             columnNumber--;
-            res.append((char)(columnNumber % 26 + 'A'));
+            res.append((char) (columnNumber % 26 + 'A'));
             columnNumber /= 26;
         }//ASCII:0->A->"65":1 25->Z->"90":26
         res.reverse();

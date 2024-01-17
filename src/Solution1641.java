@@ -52,7 +52,7 @@ public class Solution1641 {
             }
             n--;
             sum = Arrays.stream(newSums).sum();
-            sums = Arrays.copyOf(newSums,5);
+            sums = Arrays.copyOf(newSums, 5);
         }
         ans = Arrays.stream(sums).sum();
         return ans;

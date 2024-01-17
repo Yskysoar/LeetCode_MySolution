@@ -2,12 +2,13 @@ import java.util.Arrays;
 
 public class Solution349 {
     public static void main(String[] args) {
-        int[] arr1 = new int[] {1,5,1,3,5,7,8};
-        int[] arr2 = new int[] {5,5};
+        int[] arr1 = new int[]{1, 5, 1, 3, 5, 7, 8};
+        int[] arr2 = new int[]{5, 5};
         Solution349 solution349 = new Solution349();
         int[] res = solution349.intersection(arr1, arr2);
         System.out.println(Arrays.toString(res));
     }
+
     public int[] intersection(int[] nums1, int[] nums2) {
         //利用Arrays类进行排序
         Arrays.sort(nums1);
@@ -23,9 +24,9 @@ public class Solution349 {
                 }
                 index1++;
                 index2++;
-            }else if (nums1[index1] < nums2[index2]) {
+            } else if (nums1[index1] < nums2[index2]) {
                 index1++;
-            }else {
+            } else {
                 index2++;
             }
         }

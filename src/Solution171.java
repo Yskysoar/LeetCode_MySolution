@@ -4,11 +4,12 @@ public class Solution171 {
         int res = solution171.titleToNumber("AAA");
         System.out.println(res);
     }
+
     public int titleToNumber(String columnTitle) {
         //特殊的26进制，A->1：65  Z->26：90
         int res = 0;
         for (int i = 0; i < columnTitle.length(); i++) {
-            int temp = columnTitle.charAt(i) -'A' + 1;
+            int temp = columnTitle.charAt(i) - 'A' + 1;
             res = res * 26 + temp;
             /* 26为一个进制，我们会从头到尾遍历整个columnTitle，我们从位权最高的项开始
                当我们每次循环一次，上一次的结果就要提高一次位权(索引从0开始刚好对应权重)

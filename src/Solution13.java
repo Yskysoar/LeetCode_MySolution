@@ -4,10 +4,11 @@ public class Solution13 {
         int num = solution1.romanToInt("XIX");
         System.out.println(num);
     }
+
     public int romanToInt(String s) {
         int length = s.length();
         int[] arr = new int[length];
-        for(int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             switch (s.charAt(i)) {
                 case 'I' -> arr[i] = 1;
                 case 'V' -> arr[i] = 5;

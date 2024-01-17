@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * @author Yskysoar
  * @createTime 2023-05-08 10:18
@@ -27,7 +25,7 @@ public class Solution383 {
     /**
      * 暴露读取：全部遍历，当有字符数量不够的时候直接返回false
      * @param ransomNote 组成的字符
-     * @param magazine 提供的字符
+     * @param magazine   提供的字符
      * @return 是否可以构成
      */
     public boolean canConstruct(String ransomNote, String magazine) {

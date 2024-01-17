@@ -28,13 +28,13 @@ import java.util.Map;
 public class Solution210 {
     public static void main(String[] args) {
         Solution210 solution210 = new Solution210();
-        int[] ans = solution210.findOrder(2, new int[][]{{1, 0}, {0,1}});
+        int[] ans = solution210.findOrder(2, new int[][]{{1, 0}, {0, 1}});
         System.out.println(Arrays.toString(ans));
     }
 
     /**
      * 拓扑排序(WA:无法考虑死循环:[[0,1],[1,0]])：计算入度，将入度为0的课程输出即可
-     * @param numCourses 课程数量
+     * @param numCourses    课程数量
      * @param prerequisites 先修课程列表
      * @return 课程顺序
      */

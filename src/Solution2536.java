@@ -30,7 +30,7 @@ public class Solution2536 {
 
     /**
      * 暴力执行
-     * @param n 矩阵边长
+     * @param n       矩阵边长
      * @param queries 操作数组
      * @return 操作完成后的矩阵mat
      */
@@ -52,7 +52,7 @@ public class Solution2536 {
 
     /**
      * 二维差分
-     * @param n 矩阵边长
+     * @param n       矩阵边长
      * @param queries 操作数组
      * @return 操作完成后的矩阵mat
      */

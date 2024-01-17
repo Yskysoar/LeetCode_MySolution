@@ -1,13 +1,15 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solution2089 {
     public static void main(String[] args) {
         Solution2089 solution2089 = new Solution2089();
-        List<Integer> res = solution2089.targetIndices(new int[] {1,2,5,2,3}, 2);
+        List<Integer> res = solution2089.targetIndices(new int[]{1, 2, 5, 2, 3}, 2);
         for (Integer re : res) {
             System.out.println(re);
         }
     }
+
     //直接读数
     public List<Integer> targetIndices(int[] nums, int target) {
         int minTarget = 0;
@@ -15,7 +17,7 @@ public class Solution2089 {
         for (int i : nums) {
             if (i < target) {
                 minTarget++;
-            }else if (i == target) {
+            } else if (i == target) {
                 resNum++;
             }
         }

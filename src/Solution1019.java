@@ -1,12 +1,9 @@
-import org.w3c.dom.ls.LSInput;
-
 import java.util.*;
 
 /**
  * @author Yskysoar
  * @createTime 2023-04-10 9:26
  * @description 1019. 链表中的下一个更大结点
- *
  * 给定一个长度为 n 的链表 head
  * 对于列表中的每个结点，查找下一个 更大结点 的值。也就是说，对于每个结点，找到它旁边的第一个结点的值，这个结点的值 严格大于 它的值。
  * 返回一个整数数组 answer ，其中 answer[i] 是第 i 个结点( 从1开始 )的下一个更大的结点的值。如果第 i 个结点没有下一个更大的结点，设置 answer[i] = 0 。
@@ -24,7 +21,7 @@ public class Solution1019 {
         ListNode node3 = new ListNode(3, node4);
         ListNode node2 = new ListNode(4, node3);
         ListNode node1 = new ListNode(7, node2);
-        ListNode head  = new ListNode(2, node1);
+        ListNode head = new ListNode(2, node1);
         int[] ans = solution1019.nextLargerNodes2(head);
         System.out.println(Arrays.toString(ans));
     }
@@ -69,7 +66,7 @@ public class Solution1019 {
             while (!stack.isEmpty() && stack.peek()[0] < temp.val) {//栈不为空且栈顶元素小于
                 list.set(stack.pop()[1], temp.val);
             }
-            stack.push(new int[] {temp.val, index});
+            stack.push(new int[]{temp.val, index});
             temp = temp.next;
         }
         return list.stream().mapToInt(i -> i).toArray();

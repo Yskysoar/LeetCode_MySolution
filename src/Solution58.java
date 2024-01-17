@@ -5,6 +5,7 @@ public class Solution58 {
         int res = solution7.lengthOfLastWord(s);
         System.out.println(res);
     }
+
     public int lengthOfLastWord(String s) {
         int strLength = 0;
         for (int i = s.length() - 1; i >= 0; i--) {

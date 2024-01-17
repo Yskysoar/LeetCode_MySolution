@@ -1,12 +1,12 @@
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class Solution169 {
     public static void main(String[] args) {
         Solution169 solution169 = new Solution169();
-        int res = solution169.majorityElement2(new int[]{3,3,3,2,2,1,1,1,2,2,2,2,3,3,3,3});
+        int res = solution169.majorityElement2(new int[]{3, 3, 3, 2, 2, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3});
         System.out.println(res);
     }
+
     public int majorityElement1(int[] nums) {
         //数学思维法：符号要求的数字的长度一定超过数组长度的一半
         Arrays.sort(nums);

@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.OptionalInt;
-
 /**
  * @author Yskysoar
  * @createTime 2023-07-27 22:31
@@ -18,7 +15,7 @@ import java.util.OptionalInt;
  * 输入：nums = [1,2,1,3,5,6,4]
  * 输出：1 或 5
  * 解释：你的函数可以返回索引 1，其峰值元素为 2；
- *      或者返回索引 5，其峰值元素为 6
+ * 或者返回索引 5，其峰值元素为 6
  */
 public class Solution162 {
     public static void main(String[] args) {
@@ -28,9 +25,8 @@ public class Solution162 {
     }
 
 
-
     /**
-     *暴力遍历
+     * 暴力遍历
      * @param nums 数值数组
      * @return 任意峰值位置
      */

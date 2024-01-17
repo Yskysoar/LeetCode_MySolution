@@ -11,6 +11,23 @@
  * 输出：[2,3]
  */
 public class Solution82 {
+    public static void main(String[] args) {
+//        ListNode node7 = new ListNode(5);
+//        ListNode node6 = new ListNode(4, node7);
+//        ListNode node5 = new ListNode(4, node6);
+//        ListNode node4 = new ListNode(3, node5);
+//        ListNode node3 = new ListNode(3, node4);
+        ListNode node2 = new ListNode(1);
+        ListNode node1 = new ListNode(1, node2);
+
+        Solution82 solution82 = new Solution82();
+        ListNode node = solution82.deleteDuplicates(node1);
+        while (node != null) {
+            System.out.println(node.val);
+            node = node.next;
+        }
+    }
+
     /**
      * 一次遍历：考虑到头结点也可能出现重复的情况，所以设置一个哑结点在头结点前面，然后记录设置一个结点记录位置后开始遍历，遇到重复数字的结点直接搜索到尾部然后重新链接即可
      * @param head 头结点
@@ -31,22 +48,5 @@ public class Solution82 {
             }
         }
         return ans.next;
-    }
-
-    public static void main(String[] args) {
-//        ListNode node7 = new ListNode(5);
-//        ListNode node6 = new ListNode(4, node7);
-//        ListNode node5 = new ListNode(4, node6);
-//        ListNode node4 = new ListNode(3, node5);
-//        ListNode node3 = new ListNode(3, node4);
-        ListNode node2 = new ListNode(1);
-        ListNode node1 = new ListNode(1, node2);
-
-        Solution82 solution82 = new Solution82();
-        ListNode node = solution82.deleteDuplicates(node1);
-        while (node != null) {
-            System.out.println(node.val);
-            node = node.next;
-        }
     }
 }

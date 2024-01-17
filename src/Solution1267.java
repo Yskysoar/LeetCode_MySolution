@@ -61,7 +61,7 @@ public class Solution1267 {
             }
             if (num == 1) flag[row][i]--;
         }
-        return (int) Arrays.stream(flag).flatMapToInt(Arrays :: stream).filter(value -> value == 1 || value == 2).count();
+        return (int) Arrays.stream(flag).flatMapToInt(Arrays::stream).filter(value -> value == 1 || value == 2).count();
     }
 
     /**

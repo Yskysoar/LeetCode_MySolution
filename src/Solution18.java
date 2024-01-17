@@ -24,13 +24,13 @@ import java.util.List;
 public class Solution18 {
     public static void main(String[] args) {
         Solution18 solution18 = new Solution18();
-        List<List<Integer>> ans = solution18.fourSum(new int[]{1000000000,1000000000,1000000000,1000000000}, -294967296);
+        List<List<Integer>> ans = solution18.fourSum(new int[]{1000000000, 1000000000, 1000000000, 1000000000}, -294967296);
         System.out.println(ans);
     }
 
     /**
      * 逻辑降维：转换为三数之和，和Solution15一样使用‘排序+双指针’完成
-     * @param nums 数据数组
+     * @param nums   数据数组
      * @param target 目标值
      * @return 不重复的所有四元组
      */

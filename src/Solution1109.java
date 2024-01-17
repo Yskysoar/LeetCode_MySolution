@@ -38,7 +38,7 @@ public class Solution1109 {
     /**
      * 暴力遍历
      * @param bookings 预定信息
-     * @param n 航班数量
+     * @param n        航班数量
      * @return 预定座位总数
      */
     public int[] corpFlightBookings1(int[][] bookings, int n) {
@@ -54,7 +54,7 @@ public class Solution1109 {
     /**
      * 差分：公交车问题，有n个站，在i站上车k人，要坐j站，在j+1站下车，每个站点的总人数为 上一站人数+当前人数变化
      * @param bookings 预定信息
-     * @param n 航班数量
+     * @param n        航班数量
      * @return 预定座位总数
      */
     public int[] corpFlightBookings2(int[][] bookings, int n) {

@@ -44,7 +44,8 @@ public class Solution1074 {
             for (int startCol = 1; startCol <= matrix[0].length; startCol++) {
                 for (int endRow = startRow; endRow <= matrix.length; endRow++) {
                     for (int endCol = startCol; endCol <= matrix[0].length; endCol++) {
-                        if ((preSums[endRow][endCol] - preSums[startRow - 1][endCol] - preSums[endRow][startCol - 1] + preSums[startRow - 1][startCol - 1]) == target) ans++;
+                        if ((preSums[endRow][endCol] - preSums[startRow - 1][endCol] - preSums[endRow][startCol - 1] + preSums[startRow - 1][startCol - 1]) == target)
+                            ans++;
                     }
                 }
             }

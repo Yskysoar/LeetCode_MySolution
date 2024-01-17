@@ -12,14 +12,13 @@ import java.util.HashSet;
  * 输出：1
  * 解释：红色区域和蓝色区域都是最优区域。
  * 示例 2：
- *
  * 输入：points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]
  * 输出：3
  */
 public class Solution1637 {
     public static void main(String[] args) {
         Solution1637 solution1637 = new Solution1637();
-        int ans = solution1637.maxWidthOfVerticalArea1(new int[][]{{1,5}, {1,70}, {3,1000}, {55,700},{999876789,53},{987853567,12}});
+        int ans = solution1637.maxWidthOfVerticalArea1(new int[][]{{1, 5}, {1, 70}, {3, 1000}, {55, 700}, {999876789, 53}, {987853567, 12}});
         System.out.println(ans);
     }
 

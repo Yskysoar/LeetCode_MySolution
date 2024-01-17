@@ -49,7 +49,6 @@ public class Solution2731 {
 
     /**
      * 模拟:碰撞了等于没碰撞
-     *
      * @param nums 初始位置
      * @param s    初始方向
      * @param d    时间

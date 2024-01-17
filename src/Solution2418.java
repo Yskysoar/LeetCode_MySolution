@@ -1,10 +1,11 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.TreeMap;
 
 /**
  * @author Yskysoar
  * @createTime 2023-04-25 18:18
  * @description 2418. 按身高排序
- *给你一个字符串数组 names ，和一个由 互不相同 的正整数组成的数组 heights 。两个数组的长度均为 n 。
+ * 给你一个字符串数组 names ，和一个由 互不相同 的正整数组成的数组 heights 。两个数组的长度均为 n 。
  * 对于每个下标 i，names[i] 和 heights[i] 表示第 i 个人的名字和身高。
  * 请按身高 降序 顺序返回对应的名字数组 names 。
  * 示例 1：
@@ -15,18 +16,17 @@ import java.util.*;
  * 输入：names = ["Alice","Bob","Bob"], heights = [155,185,150]
  * 输出：["Bob","Alice","Bob"]
  * 解释：第一个 Bob 最高，然后是 Alice 和第二个 Bob 。
- *
  */
 public class Solution2418 {
     public static void main(String[] args) {
         Solution2418 solution2418 = new Solution2418();
-        String[] ans = solution2418.sortPeople2(new String[]{"Mary","John","Emma"}, new int[]{180,165,170});
+        String[] ans = solution2418.sortPeople2(new String[]{"Mary", "John", "Emma"}, new int[]{180, 165, 170});
         System.out.println(Arrays.toString(ans));
     }
 
     /**
      * 暴力冒泡
-     * @param names 名字集
+     * @param names   名字集
      * @param heights 身高集
      * @return 按照身高降序的名字集
      */
@@ -49,7 +49,7 @@ public class Solution2418 {
 
     /**
      * 哈希表定制排序
-     * @param names 名字集
+     * @param names   名字集
      * @param heights 身高集
      * @return 按照身高降序的名字集
      */

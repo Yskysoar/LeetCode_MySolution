@@ -9,23 +9,22 @@ import java.util.HashSet;
  * 示例 1
  * 输入：           输出：
  * [             [
- *   [1,1,1],      [1,0,1],
- *   [1,0,1],      [0,0,0],
- *   [1,1,1]       [1,0,1]
+ * [1,1,1],      [1,0,1],
+ * [1,0,1],      [0,0,0],
+ * [1,1,1]       [1,0,1]
  * ]             ]
- *
  * 示例 2
  * 输入：            输出：
  * [              [
- *   [0,1,2,0],     [0,0,0,0],
- *   [3,4,5,2],     [0,4,5,0],
- *   [1,3,1,5]      [0,3,1,0]
+ * [0,1,2,0],     [0,0,0,0],
+ * [3,4,5,2],     [0,4,5,0],
+ * [1,3,1,5]      [0,3,1,0]
  * ]              ]
  */
 public class Interview0108 {
     public static void main(String[] args) {
         Interview0108 interview0108 = new Interview0108();
-        int[][] matrix = new int[][]{{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+        int[][] matrix = new int[][]{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
         interview0108.setZeroes(matrix);
         for (int[] ints : matrix) {
             System.out.println(Arrays.toString(ints));

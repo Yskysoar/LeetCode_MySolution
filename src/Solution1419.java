@@ -1,10 +1,7 @@
-import java.util.Arrays;
-
 /**
  * @author Yskysoar
  * @createTime 2023-05-07 0:01
  * @description 1419. 数青蛙
- *
  * 给你一个字符串 ，它表示不同青蛙发出的蛙鸣声（字符串 ）的组合。由于同一时间可以有多只青蛙呱呱作响，所以  中会混合多个 。croakOfFrogs"croak"croakOfFrogs“croak”
  * 请你返回模拟字符串中所有蛙鸣所需不同青蛙的最少数目。
  * 要想发出蛙鸣 “croak”，青蛙必须 依序 输出 这 5 个字母。如果没有输出全部五个字母，那么它就不会发出声音。

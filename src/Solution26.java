@@ -3,12 +3,13 @@ import java.util.HashSet;
 
 public class Solution26 {
     public static void main(String[] args) {
-        int[] n = new int[]{1,1,2};
+        int[] n = new int[]{1, 1, 2};
         Solution26 solution26 = new Solution26();
         int length = solution26.removeDuplicates1(n);
         System.out.println(length);
         System.out.println(Arrays.toString(n));
     }
+
     public int removeDuplicates1(int[] nums) {
         int num = 0;//记录要舍去的重复元素数量
         for (int i = 0; i < nums.length - 1; i++) {
@@ -48,7 +49,7 @@ public class Solution26 {
     }
 
     public int removeDuplicates3(int[] nums) {
-        int pIndex= 0;
+        int pIndex = 0;
         int pNum = 0;
         while (pIndex != nums.length) {
             if (nums[pIndex] == nums[pNum]) {

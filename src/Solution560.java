@@ -17,14 +17,14 @@ public class Solution560 {
     //本题无法使用“滑动窗口”解题，因为数据可能存在负数，无法保证移动窗口后的数据变化情况
     public static void main(String[] args) {
         Solution560 solution560 = new Solution560();
-        int ans = solution560.subarraySum3(new int[]{1,1,1}, 2);
+        int ans = solution560.subarraySum3(new int[]{1, 1, 1}, 2);
         System.out.println(ans);
     }
 
     /**
      * 暴力遍历
      * @param nums 整数数组
-     * @param k 目标值
+     * @param k    目标值
      * @return 连续子数组个数
      */
     public int subarraySum1(int[] nums, int k) {
@@ -42,7 +42,7 @@ public class Solution560 {
     /**
      * 暴力遍历(右边界顺序，固定右边界会超时，因为每次右边界移动实际上是在原有的所有结果上加当前的值)
      * @param nums 整数数组
-     * @param k 目标值
+     * @param k    目标值
      * @return 连续子数组个数
      */
     public int subarraySum2(int[] nums, int k) {
@@ -60,7 +60,7 @@ public class Solution560 {
     /**
      * 暴力遍历(右边界倒序)
      * @param nums 整数数组
-     * @param k 目标值
+     * @param k    目标值
      * @return 连续子数组个数
      */
     public int subarraySum3(int[] nums, int k) {
@@ -78,7 +78,7 @@ public class Solution560 {
     /**
      * 前缀和+暴力遍历(减少了计算的时间，循环内只需要简单的条件判断而不用其他计算)
      * @param nums 整数数组
-     * @param k 目标值
+     * @param k    目标值
      * @return 连续子数组个数
      */
     public int subarraySum4(int[] nums, int k) {
@@ -100,7 +100,7 @@ public class Solution560 {
     /**
      * 前缀和+哈希表(哈希表可以简化存储，因为每次右边界移动实际上是在原有的所有结果上加当前的值，所以存在上一轮的前缀和+当前值=k的情况，哈希表可以简化这些寻找过程)
      * @param nums 整数数组
-     * @param k 目标值
+     * @param k    目标值
      * @return 连续子数组个数
      */
     public int subarraySum5(int[] nums, int k) {

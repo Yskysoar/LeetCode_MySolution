@@ -3,10 +3,11 @@ import java.util.Arrays;
 public class Solution283 {
     public static void main(String[] args) {
         Solution283 solution283 = new Solution283();
-        int[] arr = new int[] {0,0,1,2,0,3};
+        int[] arr = new int[]{0, 0, 1, 2, 0, 3};
         solution283.moveZeroes5(arr);
         System.out.println(Arrays.toString(arr));
     }
+
     public void moveZeroes1(int[] nums) {
         int pIndex = 0;//指向索引
         int pNum = 0;//指向结果
@@ -64,12 +65,12 @@ public class Solution283 {
 
     public void moveZeroes5(int[] nums) {
         int k = 0;//记录0的个数
-        for (int i = 0; i < nums.length; i++){
-            if (nums[i] == 0){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
                 k++;
-            }else if(k > 0){
-                    nums[i-k] = nums[i];//[(i+1)-k]-1:（当前遍历的元素个数 - 0的个数） - 1 = 当前非零数的索引
-                    nums[i] = 0;
+            } else if (k > 0) {
+                nums[i - k] = nums[i];//[(i+1)-k]-1:（当前遍历的元素个数 - 0的个数） - 1 = 当前非零数的索引
+                nums[i] = 0;
             }
         }
     }

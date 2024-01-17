@@ -24,7 +24,7 @@ import java.util.HashSet;
 public class Solution2395 {
     public static void main(String[] args) {
         Solution2395 solution2395 = new Solution2395();
-        boolean ans = solution2395.findSubarrays(new int[]{1,2,3,4,5,1});
+        boolean ans = solution2395.findSubarrays(new int[]{1, 2, 3, 4, 5, 1});
         System.out.println(ans);
     }
 

@@ -1,7 +1,3 @@
-import java.util.Arrays;
-import java.util.Map;
-import java.util.UnknownFormatConversionException;
-
 /**
  * @author Yskysoar
  * @createTime 2023-04-17 14:49
@@ -28,13 +24,13 @@ public class Solution2409 {
     }
 
     public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
-        int[] MyCalenderPreSum = new int[] {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};//前缀和
-        int[] days = new int[] {Integer.parseInt(arriveAlice.substring(0, 2)),  Integer.parseInt(arriveAlice.substring(3)),
-                                Integer.parseInt(leaveAlice.substring(0, 2)),  Integer.parseInt(leaveAlice.substring(3)),
-                                Integer.parseInt(arriveBob.substring(0, 2)), Integer.parseInt(arriveBob.substring(3)),
-                                Integer.parseInt(leaveBob.substring(0, 2)), Integer.parseInt(leaveBob.substring(3))};
+        int[] MyCalenderPreSum = new int[]{0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};//前缀和
+        int[] days = new int[]{Integer.parseInt(arriveAlice.substring(0, 2)), Integer.parseInt(arriveAlice.substring(3)),
+                Integer.parseInt(leaveAlice.substring(0, 2)), Integer.parseInt(leaveAlice.substring(3)),
+                Integer.parseInt(arriveBob.substring(0, 2)), Integer.parseInt(arriveBob.substring(3)),
+                Integer.parseInt(leaveBob.substring(0, 2)), Integer.parseInt(leaveBob.substring(3))};
         int start = Math.max(MyCalenderPreSum[days[0] - 1] + days[1], MyCalenderPreSum[days[4] - 1] + days[5]);
         int end = Math.min(MyCalenderPreSum[days[2] - 1] + days[3], MyCalenderPreSum[days[6] - 1] + days[7]);
-        return end >= start ? end - start + 1: 0;
+        return end >= start ? end - start + 1 : 0;
     }
 }

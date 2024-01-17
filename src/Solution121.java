@@ -1,10 +1,11 @@
 public class Solution121 {
     public static void main(String[] args) {
-        int[] arr = new int[] {7,1,5,3,6,4};
+        int[] arr = new int[]{7, 1, 5, 3, 6, 4};
         Solution121 solution121 = new Solution121();
         int res = solution121.maxProfit1(arr);
         System.out.println(res);
     }
+
     public int maxProfit1(int[] prices) {//超时，时间复杂度太高
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {

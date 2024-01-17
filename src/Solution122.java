@@ -4,6 +4,7 @@ public class Solution122 {
         int res = solution122.maxProfit1(new int[]{7, 1, 5, 3, 6, 4});
         System.out.println(res);
     }
+
     public int maxProfit1(int[] prices) {
         int profit = 0;
         int cost = Integer.MAX_VALUE;
@@ -24,7 +25,7 @@ public class Solution122 {
 
     public int maxProfit2(int[] prices) {
         int profit = 0;
-        for (int i  = 1; i < prices.length; i++) {
+        for (int i = 1; i < prices.length; i++) {
             if (prices[i] > prices[i - 1]) {
                 profit += prices[i] - prices[i - 1];
             }

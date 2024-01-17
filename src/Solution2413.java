@@ -4,6 +4,7 @@ public class Solution2413 {
         int res = solution2413.smallestEvenMultiple(5);
         System.out.println(res);
     }
+
     public int smallestEvenMultiple(int n) {
         if (n % 2 == 0) {
             return n;

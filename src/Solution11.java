@@ -19,7 +19,7 @@
 public class Solution11 {
     public static void main(String[] args) {
         Solution11 solution11 = new Solution11();
-        int ans = solution11.maxArea(new int[]{1,8,6,2,5,4,8,3,7});
+        int ans = solution11.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7});
         System.out.println(ans);
     }
 

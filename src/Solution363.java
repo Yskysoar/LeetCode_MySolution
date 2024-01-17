@@ -22,7 +22,7 @@ public class Solution363 {
     /**
      * 暴力遍历+前缀和(索引值为子举证右下角坐标，若索引值为x,y，则前缀和为(0~x)&(0~y)范围的元素之和)
      * @param matrix 二维矩阵
-     * @param k 目标值
+     * @param k      目标值
      * @return 不超过k的最大数值和
      */
     public int maxSumSubmatrix(int[][] matrix, int k) {

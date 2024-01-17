@@ -3,9 +3,10 @@ import java.util.Arrays;
 public class Solution268 {
     public static void main(String[] args) {
         Solution268 solution268 = new Solution268();
-        int res = solution268.missingNumber4(new int[] {9,6,4,2,3,5,7,0,1});
+        int res = solution268.missingNumber4(new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1});
         System.out.println(res);
     }
+
     public int missingNumber1(int[] nums) {
         int sum = 0;
         for (int i : nums) {
@@ -15,7 +16,7 @@ public class Solution268 {
     }
 
     public int missingNumber2(int[] nums) {
-        int i,j;
+        int i, j;
         for (i = 0; i <= nums.length; i++) {
             for (j = 0; j < nums.length; j++) {
                 if (i == nums[j]) {

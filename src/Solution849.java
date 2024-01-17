@@ -25,7 +25,7 @@
 public class Solution849 {
     public static void main(String[] args) {
         Solution849 solution849 = new Solution849();
-        int ans = solution849.maxDistToClosest(new int[]{0,1,1,1,0,0,1,0,0});
+        int ans = solution849.maxDistToClosest(new int[]{0, 1, 1, 1, 0, 0, 1, 0, 0});
         System.out.println(ans);
     }
 

@@ -1,5 +1,5 @@
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author Yskysoar
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class Solution2605 {
     public static void main(String[] args) {
         Solution2605 solution2605 = new Solution2605();
-        int ans = solution2605.minNumber(new int[]{3,5,2,6}, new int[]{3,1,7});
+        int ans = solution2605.minNumber(new int[]{3, 5, 2, 6}, new int[]{3, 1, 7});
         System.out.println(ans);
     }
 

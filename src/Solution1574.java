@@ -2,7 +2,7 @@
  * @author Yskysoar
  * @createTime 2023-03-25 18:55
  * @description 1574. 删除最短的子数组使剩余数组有序
- *给你一个整数数组 arr ，请你删除一个子数组（可以为空），使得 arr 中剩下的元素是 非递减 的。
+ * 给你一个整数数组 arr ，请你删除一个子数组（可以为空），使得 arr 中剩下的元素是 非递减 的。
  * 一个子数组指的是原数组中连续的一个子序列。
  * 请你返回满足题目要求的最短子数组的长度。
  * 示例 1：
@@ -21,7 +21,6 @@
  * 示例 4：
  * 输入：arr = [1]
  * 输出：0
- *
  */
 public class Solution1574 {
     public static void main(String[] args) {
@@ -41,8 +40,8 @@ public class Solution1574 {
         } else if (arr[head] <= arr[tail]) {
             return tail - head - 1;
         } else {
-            int  temp = arr.length - 1;
-            int  min = arr.length - 1;//记录最小长度
+            int temp = arr.length - 1;
+            int min = arr.length - 1;//记录最小长度
             for (int i = head; i >= 0 && temp >= tail; i--) {
                 while (temp >= tail && arr[temp] >= arr[i]) {
                     temp--;//寻找后缀元素小于前缀最后一个数的位置

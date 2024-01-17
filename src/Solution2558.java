@@ -37,7 +37,7 @@ public class Solution2558 {
     /**
      * 模拟
      * @param gifts 礼物数量数组
-     * @param k 秒数
+     * @param k     秒数
      * @return 最后礼物总数
      */
     public long pickGifts(int[] gifts, int k) {

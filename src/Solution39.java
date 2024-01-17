@@ -34,7 +34,7 @@ public class Solution39 {
     /**
      * 深度优先搜索(回溯法)：类似全排列(n级遍历，如何挑选符合的部分)
      * @param candidates 无重复数据的整数数组(数据大小在2~40)
-     * @param target 目标值
+     * @param target     目标值
      * @return 返回一个内部和等于目标值的组的集合
      */
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
@@ -43,18 +43,17 @@ public class Solution39 {
         Stack<Integer> stack = new Stack<>();
         dfs(ans, stack, candidates, target);
         Set<List<Integer>> set = new HashSet<>(ans);
-        List<List<Integer>> finalAns = new ArrayList<>(set);
-        return finalAns;
+        return new ArrayList<>(set);
     }
 
     /**
      * 深度优先搜索
-     * @param ans 结果集合
-     * @param stack 临时存放栈
-     * @param nums 数据集合
+     * @param ans    结果集合
+     * @param stack  临时存放栈
+     * @param nums   数据集合
      * @param target 目标值
      */
-    public void dfs(List<List<Integer>> ans, Stack<Integer> stack,  int[] nums, int target) {
+    public void dfs(List<List<Integer>> ans, Stack<Integer> stack, int[] nums, int target) {
         for (int num : nums) {
             int sum = stack.stream().mapToInt(Integer::intValue).sum();//获取当前栈中数据的和
             if (sum == target) {

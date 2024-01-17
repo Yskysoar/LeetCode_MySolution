@@ -6,6 +6,7 @@ public class Solution290 {
         boolean res = solution290.wordPattern("abba", "dog cat cat dog");
         System.out.println(res);
     }
+
     public boolean wordPattern(String pattern, String s) {
         String[] patterns = pattern.split("");
         String[] words = s.trim().split("\\s+");

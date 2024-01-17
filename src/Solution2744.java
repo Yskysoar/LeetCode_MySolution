@@ -35,6 +35,12 @@ import java.util.HashMap;
  */
 public class Solution2744 {
 
+    public static void main(String[] args) {
+        Solution2744 solution2744 = new Solution2744();
+        int ans = solution2744.maximumNumberOfStringPairs2(new String[]{"cd", "ac", "dc", "ca", "zz"});
+        System.out.println(ans);
+    }
+
     /**
      * 哈希表：检索当前是否有反转字符串，没有就添加进去；否则减少一次反转字符串的数量(因为每个字符串最多匹配一次)然后记录ans
      * @param words 字符串数组
@@ -51,9 +57,11 @@ public class Solution2744 {
                 } else {//可匹配字符串数为0时
                     hashMap.remove(word);//移除对应的可匹配字符串
                     hashMap.put(reverse(word), hashMap.getOrDefault(reverse(word), 0) + 1);//将本身反转并添加到哈希表
+//                    hashMap.put(new StringBuilder(word).reverse().toString(), hashMap.getOrDefault(new StringBuilder(word).reverse().toString(), 0) + 1);//将本身反转并添加到哈希表
                 }
             } else {////不存在反转字符串直接将本身反转并添加到哈希表
                 hashMap.put(reverse(word), hashMap.getOrDefault(reverse(word), 0) + 1);
+//                hashMap.put(new StringBuilder(word).reverse().toString(), hashMap.getOrDefault(new StringBuilder(word).reverse().toString(), 0) + 1);//将本身反转并添加到哈希表
             }
         }
         return ans;
@@ -65,7 +73,7 @@ public class Solution2744 {
      * @return 反转的字符串
      */
     public String reverse(String s) {
-        StringBuilder str = new StringBuilder();
+        StringBuilder str = new StringBuilder();//也可以直接调用StringBuilder内置的reserve函数进行反转
         for (int i = s.length() - 1; i >= 0; i--) {
             str.append(s.charAt(i));
         }
@@ -87,11 +95,5 @@ public class Solution2744 {
             }
         }
         return ans;
-    }
-
-    public static void main(String[] args) {
-        Solution2744 solution2744 = new Solution2744();
-        int ans = solution2744.maximumNumberOfStringPairs2(new String[]{"cd", "ac", "dc", "ca", "zz"});
-        System.out.println(ans);
     }
 }

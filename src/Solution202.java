@@ -8,6 +8,7 @@ public class Solution202 {
         Boolean res = solution202.isHappy2(17);
         System.out.println(res);
     }
+
     public boolean isHappy1(int n) {//能凑到10^n就是快乐数，10以内只有1和7为快乐数，4->16->37->58->89->145->42->20->4
         while (true) {
             if (SquaresSum(n) != 1) {
@@ -20,6 +21,7 @@ public class Solution202 {
             }
         }
     }
+
     public boolean isHappy2(int n) {
         int slow = n;
         int fast = SquaresSum(n);
@@ -29,6 +31,7 @@ public class Solution202 {
         }
         return fast == 1;
     }
+
     public boolean isHappy3(int n) {
         Set<Integer> cycleMembers = new HashSet<>(Arrays.asList(4, 16, 37, 58, 89, 145, 42, 20));
         while (n != 1 && !cycleMembers.contains(n)) {
@@ -37,6 +40,7 @@ public class Solution202 {
         return n == 1;
 
     }
+
     public int SquaresSum(int num) {
         int sum = 0;
         while (num > 0) {

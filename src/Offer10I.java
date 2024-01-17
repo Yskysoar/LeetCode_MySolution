@@ -4,6 +4,7 @@ public class Offer10I {
         int res = offer10I.fib4(6);
         System.out.println(res);
     }
+
     public int fib1(int n) {//显然超时
         if (n == 0) {
             return 0;

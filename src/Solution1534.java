@@ -1,9 +1,10 @@
 public class Solution1534 {
     public static void main(String[] args) {
         Solution1534 solution1534 = new Solution1534();
-        int res = solution1534.countGoodTriplets(new int[]{3,0,1,1,9,7}, 7 ,2, 3);
+        int res = solution1534.countGoodTriplets(new int[]{3, 0, 1, 1, 9, 7}, 7, 2, 3);
         System.out.println(res);
     }
+
     public int countGoodTriplets(int[] arr, int a, int b, int c) {
         int resNum = 0;
         for (int i = 0; i < arr.length - 2; i++) {

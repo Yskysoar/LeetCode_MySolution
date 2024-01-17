@@ -1,4 +1,3 @@
-
 /**
  * @author Yskysoar
  * @createTime 2023-09-13 23:14
@@ -54,8 +53,8 @@ public class Solution2596 {
      */
     public boolean checkPosition(int[] p1, int[] p2) {
         //计算距离
-        int x = Math.abs(p1[0] -p2[0]);//水平距离
-        int y = Math.abs(p1[1] -p2[1]);//垂直距离
+        int x = Math.abs(p1[0] - p2[0]);//水平距离
+        int y = Math.abs(p1[1] - p2[1]);//垂直距离
         //水平移动两个格子且垂直移动一个格子 或者 垂直移动两个格子且水平移动一个格子
         return (x == 2 && y == 1) || (x == 1 && y == 2);
     }

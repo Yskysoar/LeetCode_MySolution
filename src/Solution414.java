@@ -4,9 +4,10 @@ import java.util.HashSet;
 public class Solution414 {
     public static void main(String[] args) {
         Solution414 solution414 = new Solution414();
-        int res = solution414.thirdMax4(new int[]{1,2,-2147483648,3});
+        int res = solution414.thirdMax4(new int[]{1, 2, -2147483648, 3});
         System.out.println(res);
     }
+
     public int thirdMax1(int[] nums) {
         Arrays.sort(nums);
         //计算不重复元素个数
@@ -54,11 +55,11 @@ public class Solution414 {
     }
 
     public int thirdMax4(int[] nums) {
-        int[] num = new int[] {-2147483648,-2147483648,-2147483648};//min normal max
+        int[] num = new int[]{-2147483648, -2147483648, -2147483648};//min normal max
         HashSet<Integer> set = new HashSet<>();
         for (int i : nums) {
             set.add(i);
-            if((i == num[2])||(i == num[1])||(i == num[0]))  {
+            if ((i == num[2]) || (i == num[1]) || (i == num[0])) {
                 continue;
             }
             if (i > num[2]) {

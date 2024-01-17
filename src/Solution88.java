@@ -3,12 +3,13 @@ import java.util.Arrays;
 public class Solution88 {
     public static void main(String[] args) {
         Solution88 solution88 = new Solution88();
-        int[] arr = new int[] {1,2,3,0,0,0};
-        solution88.merge4(arr,3, new int[] {2,3,5}, 3);
+        int[] arr = new int[]{1, 2, 3, 0, 0, 0};
+        solution88.merge4(arr, 3, new int[]{2, 3, 5}, 3);
         for (int j : arr) {
             System.out.println(j);
         }
     }
+
     public void merge1(int[] nums1, int m, int[] nums2, int n) {
         int p1 = 0;
         int p2 = 0;
@@ -18,15 +19,16 @@ public class Solution88 {
                 res[i] = nums2[p2++];
             } else if (p2 == n) {
                 res[i] = nums1[p1++];
-            }else if (nums1[p1] <= nums2[p2]) {
+            } else if (nums1[p1] <= nums2[p2]) {
                 res[i] = nums1[p1++];
             } else if (nums1[p1] > nums2[p2]) {
                 res[i] = nums2[p2++];
             }
         }
-        for (int i = 0; i < m + n; i++) {
-            nums1[i] = res[i];
-        }
+//        for (int i = 0; i < m + n; i++) {
+//            nums1[i] = res[i];
+//        }
+        if (m + n >= 0) System.arraycopy(res, 0, nums1, 0, m + n);
     }
 
     public void merge2(int[] nums1, int m, int[] nums2, int n) {
@@ -62,7 +64,7 @@ public class Solution88 {
         for (int i = m + n - 1; i >= 0; i--) {
             if (p1 == -1) {
                 nums1[i] = nums2[p2--];
-            } else if (p2 == -1){
+            } else if (p2 == -1) {
                 break;
             } else if (nums1[p1] >= nums2[p2]) {
                 nums1[i] = nums1[p1--];

@@ -5,6 +5,7 @@ public class Solution258 {
         int res = solution258.addDigits(38);
         System.out.println(res);
     }
+
     public int addDigits(int num) {
         //数学观察法：return (num - 1) % 9 +1;
         int sum = 0;

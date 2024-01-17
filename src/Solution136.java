@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Solution136 {
     public static void main(String[] args) {
         Solution136 solution136 = new Solution136();
-        int[] arr = new int[] {4,1,2,1,2,5,5};
+        int[] arr = new int[]{4, 1, 2, 1, 2, 5, 5};
         int res = solution136.singleNumber3(arr);
         System.out.println(res);
     }

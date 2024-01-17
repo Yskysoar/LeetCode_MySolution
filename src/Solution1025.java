@@ -4,10 +4,8 @@ public class Solution1025 {
         boolean res = solution1025.divisorGame(3);
         System.out.println(res);
     }
+
     public boolean divisorGame(int n) {
-        if (n % 2 == 0) {
-            return true;
-        }
-        return false;
+        return n % 2 == 0;
     }
 }

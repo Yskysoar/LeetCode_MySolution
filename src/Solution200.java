@@ -1,9 +1,10 @@
 public class Solution200 {
     public static void main(String[] args) {
         Solution200 solution200 = new Solution200();
-        int res = solution200.numIslands(new char[][] {{'1','1','1','1','0'},{'1','1','0','1','0'},{'1','1','0','0','0'},{'0','0','0','0','0'}});
+        int res = solution200.numIslands(new char[][]{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '0', '0', '0'}});
         System.out.println(res);
     }
+
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) {
             return 0;
@@ -19,6 +20,7 @@ public class Solution200 {
         }
         return num_islands;
     }
+
     public void dfs(char[][] grid, int i, int j) {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] == '0') {
             return;

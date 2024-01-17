@@ -34,7 +34,7 @@ public class Solution2530WA {
     /**
      * 暴力模拟(WA:超时)
      * @param nums 分数数组
-     * @param k 操作次数
+     * @param k    操作次数
      * @return 执行 K 次操作后的最大分数
      */
     public long maxKelements(int[] nums, int k) {

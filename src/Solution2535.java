@@ -4,6 +4,7 @@ public class Solution2535 {
         int res = solution2535.differenceOfSum2(new int[]{1000});
         System.out.println(res);
     }
+
     public int differenceOfSum1(int[] nums) {
         int sumElement = 0;
         int sumNumber = 0;

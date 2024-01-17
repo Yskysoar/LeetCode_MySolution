@@ -57,6 +57,6 @@ public class Solution2682 {
         }
         List<Integer> indexList = new ArrayList<>();
         IntStream.range(0, nums.length).filter(i -> nums[i] == 0).forEach(i -> indexList.add(i + 1));//选取所有元素值为0的元素，将他们的索引+1添加到集合中
-        return indexList.stream().mapToInt(Integer :: intValue).toArray();
+        return indexList.stream().mapToInt(Integer::intValue).toArray();
     }
 }

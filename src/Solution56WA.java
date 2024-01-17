@@ -19,7 +19,7 @@ import java.util.Arrays;
 public class Solution56WA {
     public static void main(String[] args) {
         Solution56WA solution56WA = new Solution56WA();
-        int[][] ans = solution56WA.mergeWA(new int[][]{{1,4},{0,2},{3,5}});
+        int[][] ans = solution56WA.mergeWA(new int[][]{{1, 4}, {0, 2}, {3, 5}});
         System.out.println(Arrays.deepToString(ans));
     }
 
@@ -42,7 +42,7 @@ public class Solution56WA {
             }//防止[1,4][5,6]
             if (intervals[i][0] == intervals[i][1]) {//防止[0,0]
                 nums[intervals[i][0]] = 0;
-                arrayList.add(new int[] {intervals[i][0], intervals[i][0]});
+                arrayList.add(new int[]{intervals[i][0], intervals[i][0]});
             }
         }//将所有数据遍历并且进行标记
         int left = 0;
@@ -55,11 +55,11 @@ public class Solution56WA {
             while (right < nums.length && nums[right] != 0 && nums[right] != -1) {
                 right++;
             }
-            if (right == nums.length || nums[right] != -1){
-                arrayList.add(new int[] {left, right - 1});
+            if (right == nums.length || nums[right] != -1) {
+                arrayList.add(new int[]{left, right - 1});
                 left = right;//移动到下一个位置
             } else if (nums[right] == -1) {
-                arrayList.add(new int[] {left, right});
+                arrayList.add(new int[]{left, right});
                 left = right + 1;
             }
         }

@@ -34,7 +34,7 @@ public class Solution2237 {
 
     /**
      * 双指针：先判断字符串的顺序是否匹配，然后再根据 目标的每个'L'必在源字符串的对应'L'的左侧 和 目标的每个'R'必在源字符串的对应'R'的右侧 两个条件去判断
-     * @param start 初始字符串
+     * @param start  初始字符串
      * @param target 目标字符串
      * @return 是否可以移动后匹配
      */

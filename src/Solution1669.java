@@ -6,8 +6,8 @@ public class Solution1669 {
     /**
      * 将[a,b]结点删除然后将list2接上删除位置
      * @param list1 初始链表
-     * @param a 左边界
-     * @param b 右边界
+     * @param a     左边界
+     * @param b     右边界
      * @param list2 接入链表
      * @return 接入后的list1链表的头指针
      */
@@ -44,12 +44,4 @@ public class Solution1669 {
         aNode.next = bNode;
         return list1;
     }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }

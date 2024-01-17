@@ -32,13 +32,13 @@ import java.util.stream.IntStream;
 public class Solution833 {
     public static void main(String[] args) {
         Solution833 solution833 = new Solution833();
-        String ans = solution833.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe","oov","e"});
+        String ans = solution833.findReplaceString("jjievdtjfb", new int[]{4, 6, 1}, new String[]{"md", "tjgb", "jf"}, new String[]{"foe", "oov", "e"});
         System.out.println(ans);
     }
 
     /**
      * 索引值+哈希表：按照索引值从大到小的顺序来进行操作，进行拼接
-     * @param s 原字符串
+     * @param s       原字符串
      * @param indices 待操作索引组
      * @param sources 带操作索引组对应字符串
      * @param targets 替换后的字符串

@@ -31,7 +31,7 @@ public class Solution142 {
     /**
      * 暴力遍历：从每一个位置开始遍历，只要当前位置是入口，那么一定会第二次遍历到当前位置，返回即可
      * @param head 头结点
-     * @return  环的入口
+     * @return 环的入口
      */
     public ListNode detectCycle1(ListNode head) {
         ListNode node1 = head;
@@ -55,7 +55,7 @@ public class Solution142 {
     /**
      * 哈希表：set去重，当第一个重复出现就是入口
      * @param head 头结点
-     * @return  环的入口
+     * @return 环的入口
      */
     public ListNode detectCycle2(ListNode head) {
         Set<ListNode> listNodes = new HashSet<>();
@@ -76,11 +76,11 @@ public class Solution142 {
       Q:快慢指针的数学计算
       A:https://leetcode.cn/problems/linked-list-cycle-ii/solutions/12616/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/
      */
-    
+
     /**
      * 快慢指针
      * @param head 头结点
-     * @return  环的入口
+     * @return 环的入口
      */
     public ListNode detectCycle3(ListNode head) {
         ListNode fast = head;
@@ -103,11 +103,3 @@ public class Solution142 {
 
 }
 
-//  class ListNode {
-//      int val;
-//      ListNode next;
-//      ListNode(int x) {
-//          val = x;
-//          next = null;
-//      }
-//  }

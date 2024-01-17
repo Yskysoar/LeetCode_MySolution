@@ -33,7 +33,7 @@ public class LCP50 {
 
     /**
      * 顺序模拟
-     * @param gem 宝石数量
+     * @param gem        宝石数量
      * @param operations 操作信息
      * @return 最大宝石差
      */

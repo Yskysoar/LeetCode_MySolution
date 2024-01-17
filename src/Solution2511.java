@@ -27,7 +27,7 @@
 public class Solution2511 {
     public static void main(String[] args) {
         Solution2511 solution2511 = new Solution2511();
-        int ans = solution2511.captureForts(new int[]{1,-1,-1,1,1});
+        int ans = solution2511.captureForts(new int[]{1, -1, -1, 1, 1});
         System.out.println(ans);
     }
 

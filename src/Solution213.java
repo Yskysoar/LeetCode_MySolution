@@ -14,7 +14,7 @@
  * 输入：nums = [1,2,3,1]
  * 输出：4
  * 解释：你可以先偷窃 1 号房屋（金额 = 1），然后偷窃 3 号房屋（金额 = 3）。
- *      偷窃到的最高金额 = 1 + 3 = 4 。
+ * 偷窃到的最高金额 = 1 + 3 = 4 。
  * 示例 3：
  * 输入：nums = [1,2,3]
  * 输出：3
@@ -22,14 +22,14 @@
 public class Solution213 {
     public static void main(String[] args) {
         Solution213 solution213 = new Solution213();
-        int ans = solution213.rob(new int[]{1,7,9,2});
+        int ans = solution213.rob(new int[]{1, 7, 9, 2});
         System.out.println(ans);
     }
 
     /**
      * 动态规划：如果下标为0处偷了，那么n-1处就不能偷，因此考虑[0,n-2]的打家劫舍问题
-     *         如果下标为0处不偷，那么n-1处可以偷，因此考虑[1,n-1]的打家劫舍问题
-     *         最后比较二者大小即可
+     * 如果下标为0处不偷，那么n-1处可以偷，因此考虑[1,n-1]的打家劫舍问题
+     * 最后比较二者大小即可
      * @param nums 每个房子的价值
      * @return 可以获取的最大总价值
      */

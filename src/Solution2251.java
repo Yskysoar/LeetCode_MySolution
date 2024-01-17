@@ -29,7 +29,7 @@ public class Solution2251 {
     /**
      * 暴力存储(内存消耗大)
      * @param flowers 花期
-     * @param people 看花时间
+     * @param people  看花时间
      * @return 可以看见的花数
      */
     public int[] fullBloomFlowers1(int[][] flowers, int[] people) {
@@ -49,7 +49,7 @@ public class Solution2251 {
     /**
      * 暴力遍历(超时)
      * @param flowers 花期
-     * @param people 看花时间
+     * @param people  看花时间
      * @return 可以看见的花数
      */
     public int[] fullBloomFlowers2(int[][] flowers, int[] people) {

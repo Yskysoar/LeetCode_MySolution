@@ -6,6 +6,7 @@ public class Solution575 {
         int res = solution575.distributeCandies2(new int[]{1, 1, 2, 2, 3, 3, 4, 5, 6, 4});
         System.out.println(res);
     }
+
     public int distributeCandies1(int[] candyType) {
         HashSet<Integer> set = new HashSet<>();
         for (int i : candyType) {

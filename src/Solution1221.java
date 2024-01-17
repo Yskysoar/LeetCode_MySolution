@@ -4,13 +4,14 @@ public class Solution1221 {
         int res = solution1221.balancedStringSplit("RLRRLLRLRL");
         System.out.println(res);
     }
+
     public int balancedStringSplit(String s) {//贪心算法
         int num = 0;
         int resNum = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == 'L') {
                 num++;
-            }else {
+            } else {
                 num--;
             }
             if (num == 0) {

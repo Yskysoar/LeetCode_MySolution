@@ -39,13 +39,13 @@ import java.util.Arrays;
 public class Solution1921 {
     public static void main(String[] args) {
         Solution1921 solution1921 = new Solution1921();
-        int ans = solution1921.eliminateMaximum(new int[]{4,2,3}, new int[]{2,1,1});
+        int ans = solution1921.eliminateMaximum(new int[]{4, 2, 3}, new int[]{2, 1, 1});
         System.out.println(ans);
     }
 
     /**
      * 数学计算：先计算怪兽到城市的时间，然后排序，只要当前时间小于到达时间就可以被消灭，反之失败
-     * @param dist 怪兽离城市的距离
+     * @param dist  怪兽离城市的距离
      * @param speed 怪兽速度
      * @return 可以消灭的怪物数量
      */
