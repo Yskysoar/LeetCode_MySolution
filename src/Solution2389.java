@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Solution2389 {
     public static void main(String[] args) {
         Solution2389 solution2389 = new Solution2389();
-        int[] ans = solution2389.answerQueries2(new int[]{4, 5, 2, 1}, new int[]{3, 10, 21});
+        int[] ans = solution2389.answerQueries1(new int[]{4, 5, 2, 1}, new int[]{3, 10, 21});
         System.out.println(Arrays.toString(ans));
     }
 
