@@ -39,6 +39,13 @@ import java.util.List;
  */
 public class Solution2788 {
 
+    public static void main(String[] args) {
+        Solution2788 solution2788 = new Solution2788();
+        List<String> list = Arrays.asList("one.two.three", "four.five", "six");
+        List<String> ans = solution2788.splitWordsBySeparator2(list, '.');
+        System.out.println(Arrays.toString(ans.toArray()));
+    }
+
     /**
      * 模拟：遍历每一个字符串，遇到分割符号就重新记录字符串，每一个元素遍历完后进行空字符串校验
      * @param words     单词字符串
@@ -77,7 +84,7 @@ public class Solution2788 {
             int left = 0;
             int right = 0;
             while (right < word.length()) {
-                if (word.charAt(right) == separator || right +1 == word.length()) {//右指针只需要在结尾或者分割符处进行操作
+                if (word.charAt(right) == separator || right + 1 == word.length()) {//右指针只需要在结尾或者分割符处进行操作
                     if (word.charAt(right) != separator) {//当前位置为结尾且不是分割符
                         ans.add(word.substring(left, right + 1));//左闭右开
                     } else if (right > left) {//当前位置是分割符
@@ -115,12 +122,5 @@ public class Solution2788 {
             }
         }
         return ans;
-    }
-
-    public static void main(String[] args) {
-        Solution2788 solution2788 = new Solution2788();
-        List<String> list = Arrays.asList("one.two.three","four.five","six");
-        List<String> ans = solution2788.splitWordsBySeparator2(list, '.');
-        System.out.println(Arrays.toString(ans.toArray()));
     }
 }
