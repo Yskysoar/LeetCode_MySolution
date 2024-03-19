@@ -11,7 +11,7 @@ public class Solution303 {
 }
 
 class NumArray {//时间复杂度的优化，防止多次调用sumRange方法导致效率降低
-    final int[][] nums;
+    int[][] nums;
 
     public NumArray(int[] nums) {
         Arrays.sort(nums);
