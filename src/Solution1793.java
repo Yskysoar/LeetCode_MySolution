@@ -25,6 +25,12 @@ public class Solution1793 {
         System.out.println(ans);
     }
 
+    /**
+     * 双指针：以索引k为基准向两边检测
+     * @param nums 数据数组
+     * @param k    包括在内的索引值
+     * @return 最大的好子数组的分数
+     */
     public int maximumScore(int[] nums, int k) {
         int left = k - 1, right = k + 1;
         int ans = 0;
