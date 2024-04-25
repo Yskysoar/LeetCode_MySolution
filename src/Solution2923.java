@@ -31,10 +31,6 @@ import java.util.Arrays;
  * 生成的输入满足：如果 a 队比 b 队强，b 队比 c 队强，那么 a 队比 c 队强
  */
 public class Solution2923 {
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 单次遍历
      * @param grid 强弱矩阵
