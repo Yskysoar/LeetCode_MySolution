@@ -36,9 +36,6 @@ public class Solution1535WA {
     }
 
     public int getWinner(int[] arr, int k) {
-        for (int i = 0; i < arr.length; i++) {
-
-        }
         int ans = arr[0];
         int count = 0;
         while (count < k) {
