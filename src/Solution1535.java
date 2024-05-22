@@ -28,41 +28,30 @@
  * arr 所含的整数 各不相同 。
  * 1 <= k <= 10^9
  */
-public class Solution1535WA {
+public class Solution1535 {
     public static void main(String[] args) {
-        Solution1535WA solution1535WA = new Solution1535WA();
-        int ans = solution1535WA.getWinner(new int[]{1,9,8,2,3,7,6,4,5}, 7);
+        Solution1535 solution1535 = new Solution1535();
+        int ans = solution1535.getWinner(new int[]{1, 9, 8, 2, 3, 7, 6, 4, 5}, 7);
         System.out.println(ans);
     }
 
+    /**
+     * 先进行模拟（不需要移动，其实就是在向后进行比较，遇到了更大的数就重置）
+     * 在数组内已经有满足的数据则结束，否者就是寻找数组的最大值，最大值一定在接下来的比较全部获胜
+     * @param arr 数据数组
+     * @param k   连续获胜次数
+     * @return 获胜的对应的值
+     */
     public int getWinner(int[] arr, int k) {
         int ans = arr[0];
         int count = 0;
-        while (count < k) {
-            if (arr[0] < arr[1]) {
-                if (ans == arr[1]) {
-                    count++;
-                } else {
-                    ans = arr[1];
-                    count = 1;
-                }
-                move(arr, 0);
-            } else {
-                if (ans == arr[0]) {
-                    count++;
-                } else {
-                    ans = arr[0];
-                    count = 1;
-                }
-                move(arr, 1);
+        for (int i = 1; i < arr.length && count < k; i++) {
+            if (arr[i] > ans) {
+                ans = arr[i];
+                count = 0;
             }
+            count++;
         }
         return ans;
-    }
-
-    public void move(int[] arrays, int start) {
-        int num = arrays[start];
-        for (int i = start + 1; i < arrays.length; i++) arrays[i - 1] = arrays[i];
-        arrays[arrays.length - 1] = num;
     }
 }

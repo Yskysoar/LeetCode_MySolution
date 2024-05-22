@@ -53,7 +53,7 @@ public class Solution2225 {
         List<List<Integer>> ans = new ArrayList<>();
         ans.add(new ArrayList<>());
         ans.add(new ArrayList<>());
-        HashMap<Integer, Integer> nums = new HashMap<>();//key：玩家id value：比赛场次 输的局数
+        HashMap<Integer, Integer> nums = new HashMap<>();//key：玩家id value：输的局数
         for (int[] match : matches) {
             nums.put(match[0], nums.getOrDefault(match[0], 0));
             nums.put(match[1], nums.getOrDefault(match[1], 0) + 1);
