@@ -20,7 +20,7 @@
 public class Solution520 {
     /**
      * 根据题目意思，记录大写字母数量即可
-     * @param word 单次
+     * @param word 单词
      * @return 是否合法
      */
     public boolean detectCapitalUse(String word) {
