@@ -32,7 +32,7 @@ public class Solution2264 {
      * @param num 字符串
      * @return 最大的优质整数
      */
-    public String largestGoodInteger(String num) {
+    public String largestGoodInteger1(String num) {
         String ans = "";
         int number = -1;//记录优质整数的单值
         for (int i = 0; i < num.length() - 2; i++) {
@@ -48,5 +48,16 @@ public class Solution2264 {
             }
         }
         return ans;
+    }
+
+
+    public String largestGoodInteger2(String num) {
+        for (char d = '9'; d >= '0'; d--) {
+            String s = String.valueOf(d).repeat(3);
+            if (num.contains(s)) {
+                return s;
+            }
+        }
+        return "";
     }
 }
