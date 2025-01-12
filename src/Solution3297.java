@@ -30,11 +30,11 @@ import java.util.Map;
  * 1 <= word2.length <= 10^4
  * word1 和 word2 都只包含小写英文字母。
  */
-public class Solution3297WA {
+public class Solution3297 {
     public static void main(String[] args) {
-        Solution3297WA solution3297WA = new Solution3297WA();
-        long ans1 = solution3297WA.validSubstringCount1("dccdceee", "cec");
-        long ans2 = solution3297WA.validSubstringCount2("dccdceee", "cec");
+        Solution3297 solution3297 = new Solution3297();
+        long ans1 = solution3297.validSubstringCount1("dccdceee", "cec");
+        long ans2 = solution3297.validSubstringCount3("bcca", "abc");
         System.out.println(ans1);
         System.out.println(ans2);
 
@@ -109,6 +109,54 @@ public class Solution3297WA {
                     }
                     break;
                 }
+            }
+        }
+        return ans;
+    }
+
+    public long validSubstringCount3(String word1, String word2) {
+        long ans = 0;
+        if (word1.length() < word2.length()) return ans;
+        //word2的字符出现频次
+        HashMap<Character, Integer> word2Count = new HashMap<>();
+        for (int i = 0; i < word2.length(); i++) {
+            word2Count.put(word2.charAt(i), word2Count.getOrDefault(word2.charAt(i), 0) + 1);
+        }
+        //word1的前缀数组
+        int[][] word1Count = new int[word1.length() + 1][26];
+        for (int i = 1; i < word1.length() + 1; i++) {
+            System.arraycopy(word1Count[i - 1], 0, word1Count[i], 0, 26);
+            word1Count[i][word1.charAt(i - 1) - 'a']++;
+        }
+        for (Map.Entry<Character, Integer> entry : word2Count.entrySet()) {
+            if (word1Count[word1.length()][entry.getKey() - 'a'] < entry.getValue()) return 0;//如果本身该字符就不够，直接返回0
+        }
+        for (int left = 0, right = word2.length() - 1; left <= word1.length() - word2.length(); left++) {
+            while (right < word1.length()) {//找到合法的右边界
+                boolean isFlag = true;
+                for (Map.Entry<Character, Integer> entry : word2Count.entrySet()) {//只要有一个字符不满足，那么就要把右边界向右边滑动
+                    if (entry.getValue() > word1Count[right + 1][entry.getKey() - 'a'] - word1Count[left][entry.getKey() - 'a']) {
+                        isFlag = false;
+                        break;
+                    }
+                }
+                if (isFlag) {
+                    ans += (word1.length() - right);//后续只要是以当前为前缀的所有结果都满足
+                    int add;
+                    for (add = left + 1; add < right; add++) {
+                        if (word2Count.containsKey(word1.charAt(add - 1))) {
+                            if (word2Count.get(word1.charAt(add - 1)) > word1Count[right + 1][word1.charAt(add - 1) - 'a'] - word1Count[add][word1.charAt(add - 1) - 'a']) {
+                                break;
+                            }
+                        }
+                    }//add-1表示的是下一轮开始的左边界
+                    if (add > left + 1) {
+                        ans += (long) (word1.length() - right) * (add - left - 2);
+                        left = add - 2;
+                    }
+                    break;
+                }
+                right++;
             }
         }
         return ans;
