@@ -25,7 +25,7 @@ public class Solution2614 {
 
     /**
      * 遍历二维数组nums，判断对角线上的元素是否为素数，如果是，则更新ans
-     * @param nums 二维数组
+     * @param nums  二维数组
      * @return 位于 nums 至少一条 对角线 上的最大 质数
      */
     public int diagonalPrime(int[][] nums) {
@@ -43,10 +43,14 @@ public class Solution2614 {
     }
 
     public boolean isPrime(int num) {
+        // 判断num是否为1，如果是，则返回false
         if (num == 1) return false;
+        // 遍历从2到num的平方根的所有数
         for (int i = 2; i <= Math.sqrt(num); i++) {
+            // 判断num是否能被i整除，如果能，则返回false
             if (num % i == 0) return false;
         }
+        // 如果num不能被2到num的平方根之间的任何数整除，则返回true
         return true;
     }
 }
