@@ -24,10 +24,6 @@
  * word 只包含小写英文字母
  */
 public class Solution3330 {
-    public static void main(String[] args) {
-
-    }
-
 
     /**
      * 双指针查找相同元素区间，至多犯错一次，即犯错的时候就是当前连续区间的长度-1种情况
@@ -37,11 +33,7 @@ public class Solution3330 {
     public int possibleStringCount(String word) {//哈希表无法区分重复元素是否连续，例如abbaa的情况
         int ans = 0;
         for (int left = 0, right = 0; right <= word.length(); right++) {
-            if (right == word.length()) {
-                ans += right - left - 1;
-                break;
-            }
-            if (word.charAt(right) != word.charAt(left)) {
+            if (right == word.length() || word.charAt(right) != word.charAt(left)) {
                 ans += right - left - 1;
                 left = right;
             }
