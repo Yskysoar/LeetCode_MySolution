@@ -25,10 +25,10 @@ import java.util.Map;
  * 输入：numCourses = 1, prerequisites = []
  * 输出：[0]
  */
-public class Solution210 {
+public class Solution210WA {
     public static void main(String[] args) {
-        Solution210 solution210 = new Solution210();
-        int[] ans = solution210.findOrder(2, new int[][]{{1, 0}, {0, 1}});
+        Solution210WA solution210WA = new Solution210WA();
+        int[] ans = solution210WA.findOrder(2, new int[][]{{1, 0}, {0, 1}});
         System.out.println(Arrays.toString(ans));
     }
 

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * @author Yskysoar
@@ -16,10 +17,10 @@ import java.util.Arrays;
  * 输出：[[1,5]]
  * 解释：区间 [1,4] 和 [4,5] 可被视为重叠区间。
  */
-public class Solution56WA {
+public class Solution56 {
     public static void main(String[] args) {
-        Solution56WA solution56WA = new Solution56WA();
-        int[][] ans = solution56WA.mergeWA(new int[][]{{1, 4}, {0, 2}, {3, 5}});
+        Solution56 solution56 = new Solution56();
+        int[][] ans = solution56.merge(new int[][]{{1, 4}, {0, 1}});
         System.out.println(Arrays.deepToString(ans));
     }
 
@@ -64,5 +65,31 @@ public class Solution56WA {
             }
         }
         return arrayList.toArray(int[][]::new);
+    }
+
+    /**
+     * 排序 + 有限次合并
+     * @param intervals 数据数组
+     * @return 合并后的数组
+     */
+    public int[][] merge(int[][] intervals) {
+        int size = intervals.length;
+        // 按结束时间升序，结束时间相同则开始时间降序
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
+        ArrayList<int[]> arrayList = new ArrayList<>(Arrays.asList(intervals));
+        while (true) {//合并完可能会出现仍可以合并的情况
+            for (int i = 1; i < arrayList.size(); i++) {//开始合并前一个元素
+                if (arrayList.get(i - 1)[1] >= arrayList.get(i)[0]) {
+                    arrayList.get(i)[0] = Math.min(arrayList.get(i - 1)[0], arrayList.get(i)[0]);//选取更小的左边界，右边界一定是当前数组大
+                    arrayList.remove(--i);
+                }
+            }
+            if (size == arrayList.size()) {
+                break;
+            } else {
+                size = arrayList.size();
+            }
+        }
+        return arrayList.toArray(new int[arrayList.size()][2]);
     }
 }
