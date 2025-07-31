@@ -23,7 +23,11 @@ public class Solution118 {
         System.out.println(ans);
     }
 
-
+    /**
+     * 数学解法
+     * @param numRows 行数
+     * @return 杨辉三角数组
+     */
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> ans = new ArrayList<>();
         ans.add(new ArrayList<>(List.of(1)));
