@@ -27,7 +27,7 @@
 public class Solution2311 {
     public static void main(String[] args) {
         Solution2311 solution2311 = new Solution2311();
-        int ans = solution2311.longestSubsequence("00101001", 1);
+        int ans = solution2311.longestSubsequence2("00101001", 1);
         System.out.println(ans);
     }
 
@@ -37,14 +37,36 @@ public class Solution2311 {
      * @param k 十进制数
      * @return 最大长度
      */
-    public int longestSubsequence(String s, int k) {
+    public int longestSubsequence1(String s, int k) {
         int ans = 0;
         int num = 0;//记录当前保留的二进制值
         for (int i = s.length() - 1; i >= 0; i--) {
             if (s.charAt(i) == '0') {
                 ans++;
             } else {
-                if (num + Math.pow(2, s.length() - 1 - i) <= k) {
+                if (num + Math.pow(2, ans) <= k) {//在保留的二进制中转换大小
+                    num += Math.pow(2, ans);
+                    ans++;
+                }
+            }
+        }
+        return ans;
+    }
+
+    /**
+     * 贪心算法：子序列只需要考虑部分元素即可，不需要考虑连续元素，从低位向高位依次考虑当前元素是否可以被选择即可
+     * @param s 二进制序列
+     * @param k 十进制数
+     * @return 最大长度
+     */
+    public int longestSubsequence2(String s, int k) {
+        int ans = 0;
+        int num = 0;//记录当前保留的二进制值
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == '0') {
+                ans++;
+            } else {
+                if (num + Math.pow(2, s.length() - 1 - i) <= k) {//低位若被选取，则不影响高位权重；若未被选取，即使高位缩小了权重也不可能被选
                     num += Math.pow(2, s.length() - 1 - i);
                     ans++;
                 }
