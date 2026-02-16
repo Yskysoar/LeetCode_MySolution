@@ -17,7 +17,7 @@
 public class Solution67 {
     public static void main(String[] args) {
         Solution67 solution67 = new Solution67();
-        String ans = solution67.addBinary("0", "0");
+        String ans = solution67.addBinary2("100", "110010");
         System.out.println(ans);
     }
 
@@ -27,7 +27,7 @@ public class Solution67 {
      * @param b 二进制字符b
      * @return a+b的二进制结果
      */
-    public String addBinary(String a, String b) {
+    public String addBinary1(String a, String b) {
         int CF = 0;//进位
         StringBuilder ans = new StringBuilder();
         int length = Math.min(a.length(), b.length());
@@ -78,5 +78,46 @@ public class Solution67 {
             }
         }
         return CF;
+    }
+
+
+    public String addBinary2(String a, String b) {
+        StringBuilder ans = new StringBuilder();
+        int CF = 0;
+        for (int i = 0; i < Math.min(a.length(), b.length()); i++) {
+            int num = (a.charAt(a.length() - 1 - i) - '0') + (b.charAt(b.length() - 1 - i) - '0') + CF;
+            if (num > 1) {//num的可能取值只有0 1 2 3四种
+                CF = 1;
+                ans.append(num - 2);
+            } else {
+                CF = 0;
+                ans.append(num);
+            }
+        }
+        if (a.length() < b.length()) {
+            for (int i = a.length(); i < b.length(); i++) {
+                int num = b.charAt(b.length() - 1 - i) - '0' + CF;
+                if (num > 1) {//num的可能取值只有0 1 2 3四种
+                    CF = 1;
+                    ans.append(num - 2);
+                } else {
+                    CF = 0;
+                    ans.append(num);
+                }
+            }
+        } else {
+            for (int i = b.length(); i < a.length(); i++) {
+                int num = a.charAt(a.length() - 1 - i) - '0' + CF;
+                if (num > 1) {//num的可能取值只有0 1 2 3四种
+                    CF = 1;
+                    ans.append(num - 2);
+                } else {
+                    CF = 0;
+                    ans.append(num);
+                }
+            }
+        }
+        if (CF == 1) ans.append(CF);
+        return ans.reverse().toString();
     }
 }
